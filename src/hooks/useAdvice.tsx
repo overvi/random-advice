@@ -1,5 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
+import advice from "../data/advice";
 
 interface Values {
   id: number;
@@ -21,6 +22,8 @@ const useAdvice = () =>
           },
         })
         .then((res) => res.data),
+
+    initialData: advice,
   });
 
 export default useAdvice;
