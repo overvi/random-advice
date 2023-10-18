@@ -1,0 +1,81 @@
+:root {
+    --Light-Cyan: hsl(193, 38%, 86%);
+    --Neon-Green: hsl(150, 100%, 66%);
+
+    --Grayish-Blue: hsl(217, 19%, 38%);
+    --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+    --Dark-Blue: hsl(218, 23%, 16%);
+
+    --Main-Bg : rgba(32,38,50,255);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flow-control > * + * {
+    margin-top: var(--spacer , 1.9rem);
+}
+
+body {
+    background-color: var(--Dark-Blue);
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    font-family: 'Manrope', sans-serif;
+    color: #fff;
+}
+
+.wrapper {
+    background-color: var(--Dark-Grayish-Blue);
+    padding: 2rem;
+    border-radius: 8px;
+    position: relative;
+}
+
+.heading {
+     color: var(--color , var(--Neon-Green));
+     letter-spacing: 3px;
+     text-transform: uppercase;
+     font-size: 0.7rem;
+
+}
+
+.content-container {
+    max-width: 28rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.divider {
+    margin-bottom: 2.5rem;
+}
+
+.dice {
+    position: absolute;
+    background-color: var(--Neon-Green);
+    padding: 1rem 1rem 0.7rem;
+    border-radius: 50%;
+    bottom: -2em;
+    border: 0;
+    cursor: pointer;
+
+    transition:  background 500ms , box-shadow 500ms;
+}
+
+.dice:hover {
+    background-color: white;
+    box-shadow: 0px 0px 83px 10px rgba(82,255,168,0.75);}
+
+.dice > * {
+    transform: scale(.9);
+}
+
+.advice {
+    font-size: 1.5rem;
+}
