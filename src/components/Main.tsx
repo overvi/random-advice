@@ -15,7 +15,7 @@ const Main = () => {
           {isFetching ? (
             <ClipLoader color="var(--Neon-Green)" />
           ) : (
-            <p className="advice">{data.slip.advice}</p>
+            <p className="advice">"{data.slip.advice}"</p>
           )}
         </div>
         <svg
